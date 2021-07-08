@@ -3,6 +3,7 @@ import InputArea from "./Components/InputArea/InputArea";
 import SpeechBtn from "./Components/SpeechBtn/SpeechBtn";
 import ResultsArea from "./Components/ResultsArea/ResultsArea";
 import SelectionArea from "./Components/SelectionArea/SelectionArea";
+import ControlsBtn from "./Components/ControlsBtn/ControlsBtn";
 import "./App.scss";
 
 interface contetxtInterface {
@@ -35,6 +36,7 @@ function App() {
         <div className="container">
           <InputArea />
           <SelectionArea />
+          <ControlsBtn />
           <SpeechBtn />
           <ResultsArea />
         </div>

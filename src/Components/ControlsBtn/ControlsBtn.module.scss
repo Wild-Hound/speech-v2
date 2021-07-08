@@ -1,0 +1,44 @@
+.btnContainer {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  padding: 1.5em 0;
+}
+
+.controlBtn {
+  font-size: 1.15em;
+  height: 85px;
+  width: 85px;
+  background-color: transparent;
+  border-radius: 55px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.pause {
+  color: #fbc531;
+  border: 2px solid #fbc531;
+  &:hover {
+    background-color: #fbc531;
+    color: #2f3640;
+  }
+}
+
+.resume {
+  color: #00a8ff;
+  border: 2px solid #00a8ff;
+  &:hover {
+    background-color: #00a8ff;
+    color: #2f3640;
+  }
+}
+
+.stop {
+  color: #e84118;
+  border: 2px solid #e84118;
+  &:hover {
+    background-color: #e84118;
+    color: #2f3640;
+  }
+}
