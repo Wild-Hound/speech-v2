@@ -3,10 +3,9 @@ import { GlobalState } from "../../App";
 import styles from "./SpeechBtn.module.scss";
 
 const SpeechBtn = () => {
-  const { inputVal } = useContext(GlobalState);
+  const { inputVal, selectedVoice } = useContext(GlobalState);
 
   const speechUtterence = new SpeechSynthesisUtterance();
-  speechUtterence.lang = "US-en";
 
   const speakAtc = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (inputVal === "") {
@@ -18,7 +17,14 @@ const SpeechBtn = () => {
 
   const Speak = () => {
     speechUtterence.text = inputVal;
+    speechUtterence.lang = selectedVoice.voiceLang;
+    speechSynthesis.getVoices().map((voice) => {
+      if (voice.name === selectedVoice.voiceName) {
+        speechUtterence.voice = voice;
+      }
+    });
     speechSynthesis.speak(speechUtterence);
+    console.log(selectedVoice);
   };
 
   const TextOporation = () => {
