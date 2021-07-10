@@ -3,7 +3,7 @@ import { GlobalState } from "../../App";
 import styles from "./SpeechBtn.module.scss";
 
 const SpeechBtn = () => {
-  const { inputVal, selectedVoice } = useContext(GlobalState);
+  const { inputVal, selectedVoice, rate, pitch } = useContext(GlobalState);
 
   const speechUtterence = new SpeechSynthesisUtterance();
 
@@ -16,6 +16,8 @@ const SpeechBtn = () => {
   };
 
   const Speak = () => {
+    speechUtterence.rate = rate;
+    speechUtterence.pitch = pitch;
     speechUtterence.text = inputVal;
     speechUtterence.lang = selectedVoice.voiceLang;
     speechSynthesis.getVoices().map((voice) => {

@@ -1,0 +1,25 @@
+.sliderGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .sliderWrapper {
+    display: flex;
+    gap: 1em;
+
+    .sliderMeta {
+      display: flex;
+      align-items: center;
+      gap: 0.25em;
+      width: 50px;
+      > p {
+        font-size: 1.05em;
+        font-weight: 500;
+      }
+    }
+
+    .sliderInput {
+      width: 75%;
+    }
+  }
+}
