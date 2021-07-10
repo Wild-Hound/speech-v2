@@ -12,3 +12,10 @@
     max-width: 700px;
   }
 }
+
+.sentenceHighlight {
+  background-color: rgba($color: #1abc9c, $alpha: 0.5);
+}
+.wordHighlight {
+  background-color: rgba($color: #1abc9c, $alpha: 0.75);
+}
